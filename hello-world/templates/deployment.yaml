@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: helloworld-{{ .Values.environment }}
   labels:
     app: helloworld
 spec:
@@ -18,5 +18,4 @@ spec:
       containers:
       - name: helloworld
         image: crccheck/hello-world:latest
-        # image: crccheck/invalid:latest
         imagePullPolicy: IfNotPresent
