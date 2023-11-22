@@ -14,7 +14,8 @@ spec:
     metadata:
       labels:
         app: helloworld
-  containers:
-  - name: helloworld
-    image: docker.io/crccheck/hello-world:latest
-    imagePullPolicy: IfNotPresent
+    spec:
+      containers:
+      - name: helloworld
+        image: docker.io/crccheck/hello-world:latest
+        imagePullPolicy: IfNotPresent
