@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-{{ .Values.environment }}
+  name: helloworld
   labels:
     app: helloworld
 spec:
