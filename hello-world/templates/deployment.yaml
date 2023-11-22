@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: hello-world
   labels:
-    app: helloworld
+    app: hello-world
 spec:
   progressDeadlineSeconds: 15
   replicas: 1
   selector:
     matchLabels:
-      app: helloworld
+      app: hello-world
   template:
     metadata:
       labels:
-        app: helloworld
+        app: hello-world
     spec:
       containers:
-      - name: helloworld
+      - name: hello-world
         image: docker.io/crccheck/hello-world:latest
         imagePullPolicy: IfNotPresent
